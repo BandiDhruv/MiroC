@@ -27,7 +27,7 @@ export const SearchInput = () =>{
         router.push(url);
     },[debouncedValue,router])
     return (
-        <div className="w-fullll relative">
+        <div className="w-full relative">
             <Search 
             className="absolute top-1/2 left-3 transform -translate-y-1/2 text-muted-foreground h-4 w-4"
             />
