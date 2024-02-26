@@ -19,7 +19,10 @@ export const BoardList =({
     orgId,
     query,
 }:BoardListProps) =>{
-    const data=useQuery(api.boards.get,{orgId});
+    const data=useQuery(api.boards.get,{
+        orgId, 
+        ...query    
+    });
     
     //id data === NULL than there is no boards
     if(data===undefined) //means loading state
