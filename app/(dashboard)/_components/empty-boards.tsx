@@ -20,7 +20,7 @@ export const EmptyBoards = () =>{
         })
         .then((id)=>{
             toast.success("Board created");
-            router.push(`/board.${id}`)
+            router.push(`/board/${id}`)
             //todo -> redirect to boards/[id]
         })
         .catch(()=>toast.error("Failed to create board"));
