@@ -46,8 +46,8 @@ export const Info = ({boardId,}:InfoProps) =>{
                 <Image 
                     src="/logo.svg"
                     alt="Board Logo"
-                    height={40}
-                    width={40}
+                    height={30}
+                    width={30}
                     />
                 <span className={cn("font-semibold text-xl ml-2 text-black",font.className)}>
                     MiroC
