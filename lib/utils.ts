@@ -1,3 +1,4 @@
+import { Camera } from "@/types/canvas";
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -6,11 +7,11 @@ const COLORS = [
   "#D97706",
   "#059669",
   "#652648",
-  "#1335",
+  // "#1335",
   "#A6C",
-  "#996",
+  // "#996",
   "#7C3AED",
-  "#A22222",
+  // "#A22222",
   "#059",
 ]
 
@@ -20,4 +21,13 @@ export function cn(...inputs: ClassValue[]) {
 
 export function connectionIdToColor (connectionId:number):string{
   return COLORS[connectionId&COLORS.length ];
+}
+export function pointerEventToCanvasPoint(
+  e:React.PointerEvent,
+  camera:Camera,
+){
+  return {
+    x:Math.round(e.clientX) - camera.x,
+    y:Math.round(e.clientY) - camera.y
+  }
 }
